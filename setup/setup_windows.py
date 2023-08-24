@@ -234,6 +234,13 @@ def main_menu():
 
 
 if __name__ == '__main__':
+    print('This could take a while, grab a coffee while training software installs<3')
     setup_common.ensure_base_requirements()
     setup_common.setup_logging()
-    main_menu()
+
+    cudann_install()
+    sync_bits_and_bytes_files()
+    install_kohya_ss_torch2()
+    install_bitsandbytes_0_41_1()
+
+    subprocess.Popen('start cmd /k .\gui.bat --inbrowser', shell=True)
